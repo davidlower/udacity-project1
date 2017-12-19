@@ -51,6 +51,7 @@ h2 {
    justify-content: center;
    align-items: center;
    background: -webkit-linear-gradient(top, #fb5faf, #ff953e);
+   border-radius: 10px;
 }
 
 .item1 {
