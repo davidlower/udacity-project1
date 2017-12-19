@@ -1,0 +1,110 @@
+html {
+   background-color: #13131b;
+   color: #fff;
+   font-family: 'Raleway', sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+body {
+   width: 960px;
+   height: 100vh;
+   padding: 50px;
+}
+
+h1 {
+   text-transform: uppercase;
+   font-size: 4.2em;
+   background: -webkit-linear-gradient(top, #a8a4f9, #5641ff, #08005e);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+h2 {
+   font-family: 'Alex Brush', cursive;
+   font-size: 4em;
+   z-index: 2;
+   position: relative;
+   top: -1.45em;
+   background: -webkit-linear-gradient(left, #5641ff, #ff0ea6, #5641ff, #fff, #5641ff);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container {
+   display: grid;
+   height: 100%;
+   grid-template-rows: repeat(5, 6em);
+   grid-template-columns: repeat(5, 1fr);
+   grid-gap: 1.5em;
+}
+
+.box {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: -webkit-linear-gradient(top, #fb5faf, #ff953e);
+}
+
+.item1 {
+   grid-row: span 2;
+   grid-column: span 3;
+   background: -webkit-linear-gradient(left bottom, #2998e9, #1fddaf, #2998e9);
+}
+
+.item2, .item3 {
+   grid-row: span 1;
+   grid-column: span 2;
+   background: -webkit-linear-gradient(left top, #8e35f2, #2998e9, #8e35f2);
+}
+
+.item4 {
+   grid-column: span 5;
+   background: -webkit-linear-gradient(left top, #fbf675, #1fddaf, #fbf675);
+}
+
+.diamond {
+   background-color: rgba(#fb5faf, 0);
+   border: 1px #fff solid;
+   width: 2.8em;
+   height: 2.8em;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+   margin-right: 5px;
+   margin-left: 5px;
+   -webkit-animation: clockwise 10s infinite linear;
+   transform: rotate(45deg);
+}
+
+p {
+   -webkit-animation: opposite 10s infinite linear;
+   transform: rotate(-45deg);
+   font-size: 0.9em;
+}
+
+@-webkit-keyframes clockwise {
+   from {
+      -webkit-transform: rotate(0deg);
+   }
+   to {
+      -webkit-transform: rotate(359deg);
+   }
+}
+
+@-webkit-keyframes opposite {
+   from {
+      -webkit-transform: rotate(360deg);
+   }
+   to {
+      -webkit-transform: rotate(0deg);
+   }
+}
